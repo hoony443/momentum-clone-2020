@@ -10,7 +10,7 @@ function saveName(text) {
 }
 
 function handleSubmit(event) {
-    //event.preventDefault();
+    event.preventDefault();
     const currentValue = input.value;
     paintGreeting(currentValue);
     saveName(currentValue);
@@ -22,8 +22,8 @@ function askForName() {
 }
 
 function paintGreeting(text) {
-    form.classList.remove("SHOWING_CN");
-    greeting.classList.add("SHOWING_CN");
+    form.classList.remove(SHOWING_CN);
+    greeting.classList.add(SHOWING_CN);
     greeting.innerHTML = `Hello! ${text}`;
 }
 
